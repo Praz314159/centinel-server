@@ -39,6 +39,9 @@ It is recommended that you run Python version > 2.7.9 and Werkzeug version >= 0.
     $ pip install flask flask-httpauth flask-sqlalchemy passlib geoip2 netaddr postgres
     $ python run.py
 
+**This is absurd, make sure to change this to a requirements.txt file", set up is a joke ...**
+
+
 ### Supported platforms
     * Unix
     * Mac OS X

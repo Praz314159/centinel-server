@@ -1,5 +1,5 @@
 import os
-import getpass
+import getpass 
 import logging
 
 # misc
@@ -7,9 +7,12 @@ recommended_version = 1.1
 production = True
 
 # user details
+# checks environment variables LOGNAME, USER, and USERNAME" and returns the value of the 
+# first one set to non-empty string. 
 current_user  = getpass.getuser()
-centinel_home = "/opt/centinel-server/"
 
+# Sets home directory ... but ideally this isn't hardcoded 
+centinel_home = "/opt/centinel-server/"
 
 # directory structure
 results_dir     = os.path.join(centinel_home, 'results')
@@ -17,15 +20,16 @@ experiments_dir = os.path.join(centinel_home, 'experiments')
 inputs_dir = os.path.join(centinel_home, 'inputs')
 static_files_allowed = ['economistDemocracyIndex.pdf', 'consent.js']
 
-
 # details for how to access the database
 def load_uri_from_file(filename):
     with open(filename, 'r') as filep:
         uri = filep.read()
     return uri
 
-# Setup the database to connect to
+# Setup the database to connect to 
+# password file for PostgreSQL --> refers to "centinel password file" 
 database_uri_file = os.path.join(centinel_home, "cent.pgpass")
+
 if not production:
     DATABASE_URI = "postgresql://postgres:postgres@localhost/centinel"
 else:
