@@ -9,4 +9,5 @@ app.config['SQLALCHEMY_DATABASE_URI'] = config.DATABASE_URI
 
 
 auth = HTTPBasicAuth()
+# here, getting errors thrown when trying to parse cent.pgpass file, but not sure why 
 db = SQLAlchemy(app);

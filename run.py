@@ -1,6 +1,7 @@
 import os
 import sys
 import argparse
+# importing centinal has to compile _init_.py, which is failing 
 import centinel
 import centinel.models
 import centinel.views

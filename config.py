@@ -28,7 +28,8 @@ def load_uri_from_file(filename):
 
 # Setup the database to connect to 
 # password file for PostgreSQL --> refers to "centinel password file" 
-database_uri_file = os.path.join(centinel_home, "cent.pgpass")
+#database_uri_file = os.path.join(centinel_home, "cent.pgpass")
+database_uri_file = "./cent.pgpass"
 
 if not production:
     DATABASE_URI = "postgresql://postgres:postgres@localhost/centinel"
